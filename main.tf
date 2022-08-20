@@ -25,8 +25,8 @@
 
   #tags = {
    # Name = "igw"
-  }
-}
+ # }
+#}
 
 #######Subnet###################
 #resource "aws_subnet" "mysubnet" {
