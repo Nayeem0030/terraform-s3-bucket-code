@@ -7,46 +7,46 @@
   #}
 #}
 
-provider "aws" {
-  region = "us-west-2"
+#provider "aws" {
+ # region = "us-west-2"
 
-}
+#}
 
 ################vpc block###############
-resource "aws_vpc" "myvpc" {
-  cidr_block = "10.0.0.0/16"
-}
+#resource "aws_vpc" "myvpc" {
+ # cidr_block = "10.0.0.0/16"
+#}
 
 
 #############Internet gateway###############
 
-resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.myvpc.id
+#resource "aws_internet_gateway" "igw" {
+ # vpc_id = aws_vpc.myvpc.id
 
-  tags = {
-    Name = "igw"
+  #tags = {
+   # Name = "igw"
   }
 }
 
 #######Subnet###################
-resource "aws_subnet" "mysubnet" {
-  vpc_id     = aws_vpc.myvpc.id
-  cidr_block = "10.0.1.0/24"
+#resource "aws_subnet" "mysubnet" {
+ # vpc_id     = aws_vpc.myvpc.id
+  #cidr_block = "10.0.1.0/24"
 
-  tags = {
-    Name = "Subnet"
-  }
-}
+  #tags = {
+  #  Name = "Subnet"
+ # }
+#}
 
 ############Route Table##############
-resource "aws_route_table" "example" {
-  vpc_id = aws_vpc.myvpc.id
+#resource "aws_route_table" "example" {
+  #vpc_id = aws_vpc.myvpc.id
 
-  route = []
-  tags = {
-    Name = "example"
-  }
-}
+  #route = []
+  #tags = {
+  #  Name = "example"
+ # }
+#}
 
 
 
