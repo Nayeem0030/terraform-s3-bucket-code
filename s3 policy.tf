@@ -18,16 +18,6 @@ resource "aws_s3_bucket" "create-s3-bucket" {
   lifecycle_rule {
     id = "archive"
     enabled = true
-    transition {
-      days = 30
-      storage_class = "STANDARD_IA"
-    }
-
-    transition {
-      days          = 60
-      storage_class = "GLACIER"
-    }
-
   }
 
   versioning {
@@ -35,7 +25,7 @@ resource "aws_s3_bucket" "create-s3-bucket" {
   }
 
   tags = {
-    Enviroment: "QA"
+    Enviroment: "TEST"
   }
 
   server_side_encryption_configuration {
