@@ -17,6 +17,8 @@ resource "aws_s3_bucket" "create-s3-bucket" {
   lifecycle_rule {
     id = "archive"
     enabled = true
+  }
+}
     
   versioning {
     enabled = true
@@ -25,5 +27,5 @@ resource "aws_s3_bucket" "create-s3-bucket" {
   tags = {
     Enviroment: "TEST"
   }
-  }
+  
   
