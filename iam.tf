@@ -2,6 +2,6 @@ provider "aws" {
   region = "us-east-1"
 
 resource "aws_iam_user" "IAMUSERs"{
-    name = "nayeem"
+    name = "nayeemss"
 }
 }
